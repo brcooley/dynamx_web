@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Robots" content="index,follow" />
+	<meta name="author" content="Brett Cooley" />
+	<meta name="description" content="Website for DynamX Consulting" />
+	<meta name="keywords" content="Dynamx, Consulting, Small, Business, Modeling, Simulation, Combat, Analysis, Tim, Cooley" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu|Droid+Serif">
+	<link rel="stylesheet" type="text/css" href="assets/css/screen.css" media="screen" />
+	<title>{% if page.title != 'DynamX Consulting' %}{{ site.name }} - {% endif %}{{ page.title}}</title>
+</head>
+<body>
+	<div id="content">
+		<a href="/"><img id="logo" src="assets/images/logo.png" /></a>
+		<ul id="menu">
+			<li{% if page.title == 'Home' %} class="current"{% endif %}><a href="/">Home</a></li>
+			<li{% if page.title == 'About' %} class="current"{% endif %}><a href="/about">About</a></li>
+			<li{% if page.title == 'Modeling & Simulation' %} class="current"{% endif %}><a href="/modeling-simulation">M & S Analysis</a></li>
+			<li{% if page.title == 'Small Business' %} class="current"{% endif %}><a href="/small-business">Small Business</a></li>
+			<li{% if page.title == 'Combat Analysis' %} class="current"{% endif %}><a href="/combat-analysis">Combat Analysis</a></li>
+		</ul>
+		<div class="logo-line"></div>
+
+		{{ content }}
+	</div>
+</body>
+</html>
