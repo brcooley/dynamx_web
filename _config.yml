@@ -1,2 +1,7 @@
-future:	false
-server:	true	
+future: false
+server: true
+auto:   true
+include: 404/index.html
+
+name: DynamX Consulting
+email: info@dynamx.org

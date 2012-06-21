@@ -1,0 +1,179 @@
+/*
+ Stylesheet for dynamx.org
+ (c) Brett Cooley - 2012
+ */
+
+$base: #163169;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+:focus,:active {
+	outline:0;
+}
+html {
+	overflow-y: scroll;
+}
+img {
+	border: 0
+}
+body { 
+	font: .8em 'Droid Sans', 'Ubuntu', Arial, Sans; 
+	background: #fff url(../images/bg.gif) repeat-x;
+	/*background: #fff url(../images/bg.gif) repeat-x bottom;*/
+	color: #777;
+}
+a { 
+	text-decoration: none; 
+	color: #2659A6; 
+}
+h1 { 
+	font-size: 1.4em;
+	font-weight: normal; 
+}
+	h1 a { 
+		color: #fff; 
+		font-size: 1.6em; 
+	}
+h2 { 
+	font-size: 1.2em;
+}
+h3 { 
+	font-size: 1.2em; 
+	background: $base repeat-x left bottom; 
+	padding: 6px 7px; 
+	color: #fff; 
+	font-weight: normal; 
+	margin: 0 0 15px; 
+	float: left; 
+}
+h4 { 
+	margin: 0 0 15px; 
+	color: #555; 
+	font-weight: normal; 
+	font-size: 1.6em; 
+	font-weight: normal; 
+}
+p { 
+	clear: both; 
+	line-height: 1.64em; 
+	margin: 0 0 15px; 
+}
+.line { 
+	clear: both; 
+	border-bottom: 1px solid #ddd; 
+	margin: 0px 0 45px; 
+}
+.logo-line {
+	clear: both;
+	border-bottom: 1px solid #ddd;
+	margin: -10px 0px 45px;
+}
+.clear { 
+	clear: both; 
+}
+#content { 
+	width: 970px; 
+	margin: 0 auto; 
+}
+	#top { 
+		color: #ccc;
+		padding: 6px 20px 0; 
+		font-size: .84em; 
+		text-align: right; 
+	}
+	#logo { 
+		/* background: url(../../logo.png) no-repeat; */
+		/* padding-top: 180px; */
+		margin: 0px 0px 4px 0px; /* possible -170px on top margin*/
+	}
+	#menu { 
+		float: right;
+		margin-top: 33px; /* possible 12px */
+		padding: 0px 0px 10px 20px;
+		/*background: -webkit-linear-gradient(right, #fff, #ddd 4px, #fff 34px);*/
+	}
+		#menu li { 
+			display: block;
+			font-size: 1.4em;
+			line-height: 1.8em;
+		}
+			#menu li a { 
+				float: right; 
+				color: #808080;
+				border-right: 1px solid #ddd;
+				padding: 0px 5px 0px 0px; 
+				margin: 4px 0px 0px 100px;
+				-webkit-transition: color .25s ease, background .5s ease, border .2s ease;
+       			   -moz-transition: color .25s ease, background .5s ease, border .2s ease;
+       				-ms-transition: color .25s eash, background .5s ease, border .2s ease;
+    	 			 -o-transition: color .25s ease, background .5s ease, border .2s ease;
+    					transition: color .25s ease, background .5s ease, border .2s ease;
+			}
+			#menu li a:hover, #menu li.current a, #menu li a:focus { 
+				color: #000;
+/*				background: 
+					-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
+				border-right: 4px solid $base; /* #163169 or #ddd */
+				-webkit-transition: color .2s ease, background .5s ease, border .1s ease;
+		       	   -moz-transition: color .1s ease, background .5s ease, border .1s ease;
+		       	    -ms-transition: color .1s eash, background .5s ease, border .1s ease;
+		    		 -o-transition: color .1s ease, background .5s ease, border .1s ease;
+		        		transition: color .1s ease, background .5s ease, border .1s ease;
+			}
+			#menu li a.first {
+				padding: 10px 5px 0px 0px;
+				/*margin: 0px 0px 0px 0px;*/
+			}
+			#menu li a.last {
+				padding: 0px 5px 10px 0px;
+			}
+	#pitch { 
+		background: url(../images/bars_lg.png) no-repeat right top; 
+		// background: url(../images/3060stock_market_analysis.jpg) no-repeat right top;
+		padding: 30px 350px 0px 10px;
+		border-bottom: 1px solid #ddd; 
+		height: 210px; 
+		margin: -10px 0 35px; 
+	}
+		#pitch h1 { 
+			font-size: 2.6em; 
+			color: #000; 
+			/*margin: 0px 0 10px; */
+		}
+		#pitch h2 { 
+			line-height: 1.5em;
+			font-weight: normal;
+		}
+	.left { 
+		float: left; 
+		width: 250px; 
+	}	
+	.right { 
+		float: right; 
+		width: 630px; 
+		margin: 0 0 20px; 
+	}
+		.right h3 { 
+			background: #808080; 
+			font-size: .84em; 
+		}
+	.third { 
+		float: left; 
+		width: 296px; 
+		margin: 0 40px 20px 0; 
+	}
+		.last { 
+			margin-right: 0; 
+		}
+	#footer { 
+		clear: both; 
+		font-size: .84em; 
+		border-top: 1px solid #ddd; 
+		padding: 20px 0 0; 
+	}
+#endbar {
+	width: 100%;
+	background: url(../images/bg.gif) repeat-x bottom;
+}

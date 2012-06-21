@@ -1,178 +1,245 @@
 /*
-	=====================================
-	project: Distinctive
-	author:  Luka Cvrk (www.solucija.com)
-	-------------------------------------
-	2009. Solucija
-	=====================================
-*/
-
+ Stylesheet for dynamx.org
+ (c) Brett Cooley - 2012
+ */
+/* line 8, screen.scss */
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
-:focus,:active {
-	outline:0;
+
+/* line 12, screen.scss */
+:focus, :active {
+  outline: 0;
 }
+
+/* line 15, screen.scss */
 html {
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
+
+/* line 18, screen.scss */
 img {
-	border: 0
+  border: 0;
 }
-body { 
-	font: .8em 'Ubuntu','Droid Sans',Georgia, Arial, Tahoma, Verdana; 
-	background: #fff url(../images/bg.gif) repeat-x;
-	/*background: #fff url(../images/bg.gif) repeat-x bottom;*/
-	color: #777;
+
+/* line 21, screen.scss */
+body {
+  font: .8em 'Droid Sans', 'Ubuntu', Arial, Sans;
+  background: white url(../images/bg.gif) repeat-x;
+  /*background: #fff url(../images/bg.gif) repeat-x bottom;*/
+  color: #777;
 }
-a { 
-	text-decoration: none; 
-	color: #2659A6; 
+
+/* line 27, screen.scss */
+a {
+  text-decoration: none;
+  color: #2659A6;
 }
-h1 { 
-	font: 1.4em Georgia;
-	font-weight: normal; 
+
+/* line 31, screen.scss */
+h1 {
+  font-size: 1.4em;
+  font-weight: normal;
 }
-	h1 a { 
-		color: #fff; 
-		font-size: 1.6em; 
-	}
-h2 { 
-	font-size: 1.2em;
+
+/* line 35, screen.scss */
+h1 a {
+  color: #fff;
+  font-size: 1.6em;
 }
-h3 { 
-	font: 1.2em Georgia; 
-	background: #163169 repeat-x left bottom; 
-	padding: 6px 7px; 
-	color: #fff; 
-	font-weight: normal; 
-	margin: 0 0 15px; 
-	float: left; 
+
+/* line 39, screen.scss */
+h2 {
+  font-size: 1.2em;
 }
-h4 { 
-	margin: 0 0 15px; 
-	color: #555; 
-	font-weight: normal; 
-	font-size: 1.6em; 
-	font-weight: normal; 
+
+/* line 42, screen.scss */
+h3 {
+  font-size: 1.2em;
+  background: #163169 repeat-x left bottom;
+  padding: 6px 7px;
+  color: #fff;
+  font-weight: normal;
+  margin: 0 0 15px;
+  float: left;
 }
-p { 
-	clear: both; 
-	line-height: 1.64em; 
-	margin: 0 0 15px; 
+
+/* line 51, screen.scss */
+h4 {
+  margin: 0 0 15px;
+  color: #555;
+  font-weight: normal;
+  font-size: 1.6em;
+  font-weight: normal;
 }
-.line { 
-	clear: both; 
-	border-bottom: 1px solid #ddd; 
-	margin: 0px 0 45px; 
+
+/* line 58, screen.scss */
+p {
+  clear: both;
+  line-height: 1.64em;
+  margin: 0 0 15px;
 }
+
+/* line 63, screen.scss */
+.line {
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  margin: 0px 0 45px;
+}
+
+/* line 68, screen.scss */
 .logo-line {
-	clear: both;
-	border-bottom: 1px solid #ddd;
-	margin: -10px 0px 45px;
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  margin: -10px 0px 45px;
 }
-.clear { 
-	clear: both; 
+
+/* line 73, screen.scss */
+.clear {
+  clear: both;
 }
-#content { 
-	width: 970px; 
-	margin: 0 auto; 
+
+/* line 76, screen.scss */
+#content {
+  width: 970px;
+  margin: 0 auto;
 }
-	#top { 
-		color: #ccc;
-		padding: 6px 20px 0; 
-		font-size: .84em; 
-		text-align: right; 
-	}
-	#logo { 
-		/* background: url(../../logo.png) no-repeat; */
-		/* padding-top: 180px; */
-		margin: 0px 0px -10px 0px; /* possible -170px on top margin*/
-	}
-	#menu { 
-		float: right;
-		margin-top: 28px; /* possible 12px */
-		padding: 0px 0px 0px 20px;
-		/*background: -webkit-linear-gradient(right, #fff, #ddd 4px, #fff 34px);*/
-	}
-		#menu li { 
-			display: block; 
-			font-size: 1.4em;
-			line-height: 1.78em;
-		}
-			#menu li a { 
-				float: right; 
-				color: #808080;
-/*				background: 
-					-webkit-linear-gradient(right, #eee, #fff 30px);*/
-				/*border-right: 4px double #ddd;*/
-				padding: 0px 5px 0px 0px; 
-				margin: 0px 0px 0px 100px;
-				-webkit-transition: color .25s ease, background .5s ease, border .2s ease;
-       			   -moz-transition: color .25s ease, background .5s ease, border .2s ease;
-       				-ms-transition: color .25s eash, background .5s ease, border .2s ease;
-    	 			 -o-transition: color .25s ease, background .5s ease, border .2s ease;
-    					transition: color .25s ease, background .5s ease, border .2s ease;
-			}
-			#menu li a:hover, #menu li.current a, #menu li a:focus { 
-				color: #000;
-/*				background: 
-					-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
-				border-right: 4px solid #163169; /* #163169 or #ddd */
-				-webkit-transition: color .2s ease, background .5s ease, border .1s ease;
-		       	   -moz-transition: color .1s ease, background .5s ease, border .1s ease;
-		       	    -ms-transition: color .1s eash, background .5s ease, border .1s ease;
-		    		 -o-transition: color .1s ease, background .5s ease, border .1s ease;
-		        		transition: color .1s ease, background .5s ease, border .1s ease;
-			}
-			#menu li a.first {
-				padding: 10px 5px 0px 0px;
-				/*margin: 0px 0px 0px 0px;*/
-			}
-			#menu li a.last {
-				padding: 0px 5px 10px 0px;
-			}
-	#pitch { 
-		background: url(../images/bars_lg.png) no-repeat right top; 
-		padding: 30px 350px 0px 10px;
-		border-bottom: 1px solid #ddd; 
-		height: 210px; 
-		margin: -10px 0 35px; 
-	}
-		#pitch h1 { 
-			font-size: 2.6em; 
-			color: #000; 
-			/*margin: 0px 0 10px; */
-		}
-		#pitch h2 { 
-			line-height: 1.5em;
-			font-weight: normal;
-		}
-	.left { 
-		float: left; 
-		width: 250px; 
-	}	
-	.right { 
-		float: right; 
-		width: 630px; 
-		margin: 0 0 20px; 
-	}
-		.right h3 { 
-			background: #808080; 
-			font-size: .84em; 
-		}
-	.third { 
-		float: left; 
-		width: 296px; 
-		margin: 0 40px 20px 0; 
-	}
-		.last { 
-			margin-right: 0; 
-		}
-	#footer { 
-		clear: both; 
-		font-size: .84em; 
-		border-top: 1px solid #ddd; 
-		padding: 20px 0 0; 
-	}
+
+/* line 80, screen.scss */
+#top {
+  color: #ccc;
+  padding: 6px 20px 0;
+  font-size: .84em;
+  text-align: right;
+}
+
+/* line 86, screen.scss */
+#logo {
+  /* background: url(../../logo.png) no-repeat; */
+  /* padding-top: 180px; */
+  margin: 0px 0px 4px 0px;
+  /* possible -170px on top margin*/
+}
+
+/* line 91, screen.scss */
+#menu {
+  float: right;
+  margin-top: 33px;
+  /* possible 12px */
+  padding: 0px 0px 10px 20px;
+  /*background: -webkit-linear-gradient(right, #fff, #ddd 4px, #fff 34px);*/
+}
+
+/* line 97, screen.scss */
+#menu li {
+  display: block;
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+/* line 102, screen.scss */
+#menu li a {
+  float: right;
+  color: #808080;
+  border-right: 1px solid #ddd;
+  padding: 0px 5px 0px 0px;
+  margin: 4px 0px 0px 100px;
+  -webkit-transition: color .25s ease, background .5s ease, border .2s ease;
+  -moz-transition: color .25s ease, background .5s ease, border .2s ease;
+  -ms-transition: color .25s eash, background .5s ease, border .2s ease;
+  -o-transition: color .25s ease, background .5s ease, border .2s ease;
+  transition: color .25s ease, background .5s ease, border .2s ease;
+}
+
+/* line 114, screen.scss */
+#menu li a:hover, #menu li.current a, #menu li a:focus {
+  color: #000;
+  /*				background: 
+  					-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
+  border-right: 4px solid #163169;
+  /* #163169 or #ddd */
+  -webkit-transition: color .2s ease, background .5s ease, border .1s ease;
+  -moz-transition: color .1s ease, background .5s ease, border .1s ease;
+  -ms-transition: color .1s eash, background .5s ease, border .1s ease;
+  -o-transition: color .1s ease, background .5s ease, border .1s ease;
+  transition: color .1s ease, background .5s ease, border .1s ease;
+}
+
+/* line 125, screen.scss */
+#menu li a.first {
+  padding: 10px 5px 0px 0px;
+  /*margin: 0px 0px 0px 0px;*/
+}
+
+/* line 129, screen.scss */
+#menu li a.last {
+  padding: 0px 5px 10px 0px;
+}
+
+/* line 132, screen.scss */
+#pitch {
+  background: url(../images/bars_lg.png) no-repeat right top;
+  padding: 30px 350px 0px 10px;
+  border-bottom: 1px solid #ddd;
+  height: 210px;
+  margin: -10px 0 35px;
+}
+
+/* line 140, screen.scss */
+#pitch h1 {
+  font-size: 2.6em;
+  color: #000;
+  /*margin: 0px 0 10px; */
+}
+
+/* line 145, screen.scss */
+#pitch h2 {
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+/* line 149, screen.scss */
+.left {
+  float: left;
+  width: 250px;
+}
+
+/* line 153, screen.scss */
+.right {
+  float: right;
+  width: 630px;
+  margin: 0 0 20px;
+}
+
+/* line 158, screen.scss */
+.right h3 {
+  background: #808080;
+  font-size: .84em;
+}
+
+/* line 162, screen.scss */
+.third {
+  float: left;
+  width: 296px;
+  margin: 0 40px 20px 0;
+}
+
+/* line 167, screen.scss */
+.last {
+  margin-right: 0;
+}
+
+/* line 170, screen.scss */
+#footer {
+  clear: both;
+  font-size: .84em;
+  border-top: 1px solid #ddd;
+  padding: 20px 0 0;
+}
+
+/* line 176, screen.scss */
+#endbar {
+  width: 100%;
+  background: url(../images/bg.gif) repeat-x bottom;
+}
