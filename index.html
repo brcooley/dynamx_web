@@ -2,11 +2,91 @@
 layout: default
 title: Home
 ---
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.5.0"></script>
+<style type="text/css">
 
+	rect {
+	  stroke: #fff;
+	  stroke-width: 2px;
+	}
+
+</style>
+<script type="text/javascript">
+
+var w = 280,
+    h = 200,
+    z = 40,
+    x = w / z,
+    y = h / z;
+
+var svg = d3.select(".third").append("svg:svg")
+    .attr("width", w)
+    .attr("height", h);
+
+svg.selectAll("rect")
+    .data(d3.range(x * y))
+  .enter().append("svg:rect")
+    .attr("transform", translate)
+    .attr("width", z)
+    .attr("height", z)
+    .style("fill", d3.scale.pow().domain([0, x * y]).range(["#163169", "#ddd"]));
+    // .style("fill", function(d) {
+    //     var mid = Math.ceil(x/2);
+    //     return (d % x) < mid ? d3.interpolateRgb("#ddd","#163169")((d % x) / mid) : d3.interpolateRgb("#163169","#ddd")((d % x) / x)
+    // });
+
+function translate(d) {
+  return "translate(" + (d % x) * z + "," + Math.floor(d / x) * z + ")";
+}
+
+function mouseover() {
+  this.parentNode.appendChild(this);
+  d3.select(this).transition()
+      .duration(500)
+      .style("fill-opacity", .5)
+    .transition()
+      .delay(1000)
+      .style("fill-opacity", 1);
+}
+
+function fadeMe() {
+  this.parentNode.appendChild(this);
+  d3.select(this).transition()
+      // .delay(function () { return Math.round(Math.random() * 1000); })
+      .duration(function() { return Math.round(Math.random() * 2000) + 1500; })
+      .style("fill-opacity", 0.5)
+    .transition()
+      .delay(2500)
+      // .duration(2500)
+      .style("fill-opacity", 1);
+}
+
+function autoRnd() {
+  var sel1 = Math.round(Math.random() * x * y);
+  var sel2 = Math.round(Math.random() * x * y);
+  // var ySel = Math.random() * y;
+  d3.selectAll("rect").transition()
+      .delay(function () { return Math.round(Math.random() * 250); })
+      .duration(2500)
+      .style("fill-opacity", function(d) { return d == sel1 || d == sel2 ? 0.5 : 1 })
+    .transition()
+      .delay(2500)
+      .style("fill-opacity", 1);
+}
+
+function pickNode() {
+  d3.selectAll("rect")
+    .filter(function(d) { return d == Math.round(Math.random() * x * y); })
+    .each(fadeMe);
+}
+
+window.setInterval(pickNode, 2000);
+    </script>
 <div id="pitch">
 	<h1>We provide Modeling,<br /> Simulation, and Analysis Solutions.</h1>
 	<h2>From unique cutting edge return on investment methodology to supply chain modeling to medical modeling and simulation problems and standout course development; since 2005 DynamX has answered the call.  Let us meet your needs and exceed your standards today.</h2>
-</div>	
+	<div id="graphic"></div>
+</div>
 <div class="third">
 	<a href="/modeling-simulation"><h3>Modeling and Simulation</h3></a>
 	<p>DynamX Consulting has a strong history of Modeling and Simulation (M&S) performance. Starting in 2005, we have been increasingly engaged in the Modeling and Simulation trade-space performing tasks in areas including return on investment studies, discrete event modeling, and industrial supply chain analysis.</p>
