@@ -60,6 +60,11 @@ p {
 	line-height: 1.64em; 
 	margin: 0 0 15px; 
 }
+ul {
+	clear: both;
+	line-height: 1.64em;
+	margin:0px 0px 15px 25px;
+}
 .line { 
 	clear: both; 
 	border-bottom: 1px solid #ddd; 
@@ -77,12 +82,12 @@ p {
 	width: 970px; 
 	margin: 0 auto; 
 }
-	#top { 
-		color: #ccc;
-		padding: 6px 20px 0; 
-		font-size: .84em; 
-		text-align: right; 
-	}
+	// #top { 
+	// 	color: #ccc;
+	// 	padding: 6px 20px 0; 
+	// 	font-size: .84em; 
+	// 	text-align: right; 
+	// }
 	#logo { 
 		/* background: url(../../logo.png) no-repeat; */
 		/* padding-top: 180px; */
@@ -122,16 +127,8 @@ p {
 		    		 -o-transition: color .1s ease, background .5s ease, border .1s ease;
 		        		transition: color .1s ease, background .5s ease, border .1s ease;
 			}
-			#menu li a.first {
-				padding: 10px 5px 0px 0px;
-				/*margin: 0px 0px 0px 0px;*/
-			}
-			#menu li a.last {
-				padding: 0px 5px 10px 0px;
-			}
 	#pitch { 
 		background: url(../images/bars_lg.png) no-repeat right top; 
-		// background: url(../images/3060stock_market_analysis.jpg) no-repeat right top;
 		padding: 30px 350px 0px 10px;
 		border-bottom: 1px solid #ddd; 
 		height: 210px; 
@@ -146,6 +143,25 @@ p {
 			line-height: 1.5em;
 			font-weight: normal;
 		}
+		#graphic {
+			width: 320px;
+			height: 240px;
+		}
+	.full {
+		float: left;
+		width: 900px;
+		margin-left: 35px;
+	}
+		.full h1 {
+			font-size: 2em;
+			color: #000;
+			font-variant: small-caps;
+			margin-bottom: 30px;
+			// margin-left: -5px;
+		}
+	.bigfont {
+		font-size: 1.12em;
+	}
 	.left { 
 		float: left; 
 		width: 250px; 

@@ -36,25 +36,29 @@ svg.selectAll("rect")
     .attr("transform", translate)
     .attr("width", z)
     .attr("height", z)
-    .style("fill", d3.scale.pow().domain([0, x * y]).range(["#163169", "#ddd"]));
-    // .style("fill", function(d) {
-    //     var mid = Math.ceil(x/2);
-    //     return (d % x) < mid ? d3.interpolateRgb("#ddd","#163169")((d % x) / mid) : d3.interpolateRgb("#163169","#ddd")((d % x) / x)
-    // });
+    // .style("fill", d3.scale.pow().domain([0, x * y]).range(["#163169", "#ddd"]));
+    .style("fill", function(d) {
+        var xmid = Math.ceil(x / 2);
+        var col = d % x;
+        var ymid = Math.floor(y / 2);
+        var row = Math.floor(d / x);
+        // return col < xmid ? d3.interpolateRgb("#ddd","#163169")(col / xmid) : d3.interpolateRgb("#163169","#ddd")(col / x)
+        return row <= ymid ? d3.interpolateRgb("#ddd","#163169")(row / ymid) : d3.interpolateRgb("#163169","#ddd")(row / y)
+    });
 
 function translate(d) {
   return "translate(" + (d % x) * z + "," + Math.floor(d / x) * z + ")";
 }
 
-function mouseover() {
-  this.parentNode.appendChild(this);
-  d3.select(this).transition()
-      .duration(500)
-      .style("fill-opacity", .5)
-    .transition()
-      .delay(1000)
-      .style("fill-opacity", 1);
-}
+// function mouseover() {
+//   this.parentNode.appendChild(this);
+//   d3.select(this).transition()
+//       .duration(500)
+//       .style("fill-opacity", .5);
+//     .transition()
+//       .delay(1000)
+//       .style("fill-opacity", 1);
+// }
 
 function fadeMe() {
   this.parentNode.appendChild(this);

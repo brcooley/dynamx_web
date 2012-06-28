@@ -82,39 +82,38 @@ p {
 }
 
 /* line 63, screen.scss */
+ul {
+  clear: both;
+  line-height: 1.64em;
+  margin: 0px 0px 15px 25px;
+}
+
+/* line 68, screen.scss */
 .line {
   clear: both;
   border-bottom: 1px solid #ddd;
   margin: 0px 0 45px;
 }
 
-/* line 68, screen.scss */
+/* line 73, screen.scss */
 .logo-line {
   clear: both;
   border-bottom: 1px solid #ddd;
   margin: -10px 0px 45px;
 }
 
-/* line 73, screen.scss */
+/* line 78, screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 76, screen.scss */
+/* line 81, screen.scss */
 #content {
   width: 970px;
   margin: 0 auto;
 }
 
-/* line 80, screen.scss */
-#top {
-  color: #ccc;
-  padding: 6px 20px 0;
-  font-size: .84em;
-  text-align: right;
-}
-
-/* line 86, screen.scss */
+/* line 91, screen.scss */
 #logo {
   /* background: url(../../logo.png) no-repeat; */
   /* padding-top: 180px; */
@@ -122,7 +121,7 @@ p {
   /* possible -170px on top margin*/
 }
 
-/* line 91, screen.scss */
+/* line 96, screen.scss */
 #menu {
   float: right;
   margin-top: 33px;
@@ -131,14 +130,14 @@ p {
   /*background: -webkit-linear-gradient(right, #fff, #ddd 4px, #fff 34px);*/
 }
 
-/* line 97, screen.scss */
+/* line 102, screen.scss */
 #menu li {
   display: block;
   font-size: 1.4em;
   line-height: 1.8em;
 }
 
-/* line 102, screen.scss */
+/* line 107, screen.scss */
 #menu li a {
   float: right;
   color: #808080;
@@ -152,7 +151,7 @@ p {
   transition: color .25s ease, background .5s ease, border .2s ease;
 }
 
-/* line 114, screen.scss */
+/* line 119, screen.scss */
 #menu li a:hover, #menu li.current a, #menu li a:focus {
   color: #000;
   /*				background: 
@@ -166,18 +165,7 @@ p {
   transition: color .1s ease, background .5s ease, border .1s ease;
 }
 
-/* line 125, screen.scss */
-#menu li a.first {
-  padding: 10px 5px 0px 0px;
-  /*margin: 0px 0px 0px 0px;*/
-}
-
-/* line 129, screen.scss */
-#menu li a.last {
-  padding: 0px 5px 10px 0px;
-}
-
-/* line 132, screen.scss */
+/* line 130, screen.scss */
 #pitch {
   background: url(../images/bars_lg.png) no-repeat right top;
   padding: 30px 350px 0px 10px;
@@ -186,71 +174,97 @@ p {
   margin: -10px 0 35px;
 }
 
-/* line 140, screen.scss */
+/* line 137, screen.scss */
 #pitch h1 {
   font-size: 2.6em;
   color: #000;
   /*margin: 0px 0 10px; */
 }
 
-/* line 145, screen.scss */
+/* line 142, screen.scss */
 #pitch h2 {
   line-height: 1.5em;
   font-weight: normal;
 }
 
-/* line 149, screen.scss */
+/* line 146, screen.scss */
+#graphic {
+  width: 320px;
+  height: 240px;
+}
+
+/* line 150, screen.scss */
+.full {
+  float: left;
+  width: 900px;
+  margin-left: 35px;
+}
+
+/* line 155, screen.scss */
+.full h1 {
+  font-size: 2em;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 30px;
+}
+
+/* line 162, screen.scss */
+.bigfont {
+  font-size: 1.12em;
+}
+
+/* line 165, screen.scss */
 .left {
   float: left;
   width: 250px;
 }
 
-/* line 153, screen.scss */
+/* line 169, screen.scss */
 .bio {
   float: right;
 }
 
-/* line 156, screen.scss */
+/* line 172, screen.scss */
 #name {
   font-size: 2em;
 }
 
-/* line 159, screen.scss */
+/* line 175, screen.scss */
 #quicklinks {
   margin-top: -10px;
 }
 
-/* line 162, screen.scss */
+/* line 178, screen.scss */
 .right {
   float: right;
   width: 630px;
   margin: 0 0 20px;
 }
 
-/* line 167, screen.scss */
+/* line 183, screen.scss */
 .right h3 {
   background: #808080;
   font-size: .84em;
 }
 
-/* line 171, screen.scss */
+/* line 187, screen.scss */
 .third {
   float: left;
   width: 296px;
   margin: 0 40px 20px 0;
 }
 
-/* line 176, screen.scss */
+/* line 192, screen.scss */
 .last {
   margin-right: 0;
 }
 
-/* line 179, screen.scss */
+/* line 195, screen.scss */
 #about {
   margin-top: 40px;
 }
 
-/* line 182, screen.scss */
+/* line 198, screen.scss */
 #footer {
   clear: both;
   font-size: .84em;
@@ -258,7 +272,7 @@ p {
   padding: 20px 0 0;
 }
 
-/* line 188, screen.scss */
+/* line 204, screen.scss */
 #endbar {
   width: 100%;
   background: url(../images/bg.gif) repeat-x bottom;
