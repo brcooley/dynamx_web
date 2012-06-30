@@ -11,8 +11,9 @@ body {
 }
 
 rect {
+  /*stroke: #abb2c0;*/
   stroke: #fff;
-  stroke-width: 2px;
+  stroke-width: .01px;
 }
 
     </style>
@@ -20,9 +21,9 @@ rect {
   <body>
     <script type="text/javascript">
 
-var w = 280,
-    h = 200,
-    z = 40,
+var w = 310,
+    h = 230,
+    z = 5,
     x = w / z,
     y = h / z;
 
@@ -37,14 +38,23 @@ svg.selectAll("rect")
     .attr("width", z)
     .attr("height", z)
     // .style("fill", d3.scale.pow().domain([0, x * y]).range(["#163169", "#ddd"]));
-    .style("fill", function(d) {
-        var xmid = Math.ceil(x / 2);
-        var col = d % x;
-        var ymid = Math.floor(y / 2);
-        var row = Math.floor(d / x);
+    // .style("fill", function(d) {
+        // var xmid = Math.floor(x / 2);
+        // var col = d % x;
+        // var ymid = Math.floor(y / 2);
+        // var row = Math.floor(d / x);
         // return col < xmid ? d3.interpolateRgb("#ddd","#163169")(col / xmid) : d3.interpolateRgb("#163169","#ddd")(col / x)
-        return row <= ymid ? d3.interpolateRgb("#ddd","#163169")(row / ymid) : d3.interpolateRgb("#163169","#ddd")(row / y)
-    });
+        // return row <= ymid ? d3.interpolateRgb("#ddd","#163169")(row / ymid) : d3.interpolateRgb("#163169","#ddd")(row / y)
+        // var xcolor = d3.ease("exp").ease(Math.abs(col-xmid) / xmid);
+    //     var xcolor = Math.abs(col-xmid) / xmid;
+    //     var ycolor = Math.abs(row-ymid) / ymid;
+        // return d3.interpolateRgb("#163169","#ddd")((.0*xcolor) + (.2*xcolor*ycolor) + (.8*ycolor))
+        // return d3.interpolateRgb("#ddd","#163169")(Math.round(Math.random() * xcolor * ycolor) / (x + y))
+    //     return "rgba(22,49,105,0)"
+    // })
+    .style("fill","#163169")
+    .style("fill-opacity",0);
+    // .on("click",mouseclick);
 
 function translate(d) {
   return "translate(" + (d % x) * z + "," + Math.floor(d / x) * z + ")";
@@ -53,35 +63,76 @@ function translate(d) {
 // function mouseover() {
 //   this.parentNode.appendChild(this);
 //   d3.select(this).transition()
+//       // .duration(function() { return Math.round(Math.random() * 1000) + 1500; })
 //       .duration(500)
-//       .style("fill-opacity", .5);
+//       .style("fill-opacity", .5)
 //     .transition()
-//       .delay(1000)
+//       .delay(500)
+//       // .duration(1000)
 //       .style("fill-opacity", 1);
 // }
+
+function mouseclick() {
+  this.parentNode.appendChild(this);
+  d3.select(this).transition()
+    .style("stroke-width","1px")
+    .style("stroke","#ddd")
+  .transition()
+    .duration(1000)
+    // .attr("transform",translate)
+    .attr("transform",function(d) { return translate(d) + "rotateY(180deg)"; })
+  .transition()
+    .delay(1500)
+    .attr("transform",translate)
+    .style("stroke-width",".01px")
+}
 
 function fadeMe() {
   this.parentNode.appendChild(this);
   d3.select(this).transition()
       // .delay(function () { return Math.round(Math.random() * 1000); })
-      .duration(function() { return Math.round(Math.random() * 2000) + 1500; })
+      .duration(function() { return Math.round(Math.random() * 1000) + 1500; })
       .style("fill-opacity", 0.5)
     .transition()
       .delay(2500)
-      // .duration(2500)
+      // .duration(function() { return Math.round(Math.random() * 1000) + 1500; })
       .style("fill-opacity", 1);
 }
 
-function autoRnd() {
-  var sel1 = Math.round(Math.random() * x * y);
-  var sel2 = Math.round(Math.random() * x * y);
-  // var ySel = Math.random() * y;
-  d3.selectAll("rect").transition()
-      .delay(function () { return Math.round(Math.random() * 250); })
-      .duration(2500)
-      .style("fill-opacity", function(d) { return d == sel1 || d == sel2 ? 0.5 : 1 })
+function pickRow() {
+  var row = Math.round(Math.random() * y);
+  var dir = Math.random() * 100 > 50 ? 1 : -1;
+  d3.selectAll("rect")
+    .filter(function(d) { return Math.floor(d / x) == row; })
     .transition()
-      .delay(2500)
+      .delay(function(d) { 
+        var turn = (dir == 1 ? (d % x) : x - (d % x));
+        return turn * 75;
+      })
+      .duration(750)
+      .style("fill-opacity", .75)
+      // .style("fill","rgb(22,49,105)")
+    .transition()
+      .delay(function(d) { 
+        var turn = (dir == 1 ? (d % x) : x - (d % x));
+        return (turn * 75) + 3000;
+      })
+      .duration(1500)
+      .style("fill-opacity", 0);
+      // .style("fill","rgba(22,49,105,0)")
+      // .style("fill","#fff");
+}
+
+function pickCol() {
+  var col = Math.round(Math.random() * x);
+  d3.selectAll("rect")
+    .filter(function(d) { return (d % x) == col; })
+    .transition()
+      .delay(function(d) { return Math.floor(d / x) * 100 })
+      .duration(1000)
+      .style("fill-opacity", .5)
+    .transition()
+      .delay(function(d) { return (Math.floor(d / x) * 100) + 3000 })
       .style("fill-opacity", 1);
 }
 
@@ -91,7 +142,9 @@ function pickNode() {
     .each(fadeMe);
 }
 
-window.setInterval(pickNode, 2000);
+pickRow()
+window.setInterval(pickRow, 7000);
+// window.setInterval(pickCol, 10000);
     </script>
   </body>
 </html>

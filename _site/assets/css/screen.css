@@ -92,14 +92,14 @@ ul {
 .line {
   clear: both;
   border-bottom: 1px solid #ddd;
-  margin: 0px 0 45px;
+  margin: 0px 0 40px;
 }
 
 /* line 73, screen.scss */
 .logo-line {
   clear: both;
   border-bottom: 1px solid #ddd;
-  margin: -10px 0px 45px;
+  margin: -10px 0px 40px;
 }
 
 /* line 78, screen.scss */
@@ -117,7 +117,7 @@ ul {
 #logo {
   /* background: url(../../logo.png) no-repeat; */
   /* padding-top: 180px; */
-  margin: 0px 0px 4px 0px;
+  margin: 0px 0px 4px 0px !important;
   /* possible -170px on top margin*/
 }
 
@@ -198,9 +198,10 @@ ul {
   float: left;
   width: 900px;
   margin-left: 35px;
+  margin-bottom: 25px;
 }
 
-/* line 155, screen.scss */
+/* line 156, screen.scss */
 .full h1 {
   font-size: 2em;
   color: #000;
@@ -208,71 +209,72 @@ ul {
   margin-bottom: 30px;
 }
 
-/* line 162, screen.scss */
+/* line 163, screen.scss */
 .bigfont {
   font-size: 1.12em;
 }
 
-/* line 165, screen.scss */
+/* line 166, screen.scss */
 .left {
   float: left;
   width: 250px;
 }
 
-/* line 169, screen.scss */
+/* line 170, screen.scss */
 .bio {
   float: right;
 }
 
-/* line 172, screen.scss */
+/* line 173, screen.scss */
 #name {
   font-size: 2em;
 }
 
-/* line 175, screen.scss */
+/* line 176, screen.scss */
 #quicklinks {
   margin-top: -10px;
 }
 
-/* line 178, screen.scss */
+/* line 179, screen.scss */
 .right {
   float: right;
   width: 630px;
   margin: 0 0 20px;
 }
 
-/* line 183, screen.scss */
+/* line 184, screen.scss */
 .right h3 {
   background: #808080;
   font-size: .84em;
 }
 
-/* line 187, screen.scss */
+/* line 188, screen.scss */
 .third {
   float: left;
   width: 296px;
   margin: 0 40px 20px 0;
+  text-align: justify;
 }
 
-/* line 192, screen.scss */
+/* line 194, screen.scss */
 .last {
   margin-right: 0;
 }
 
-/* line 195, screen.scss */
+/* line 197, screen.scss */
 #about {
   margin-top: 40px;
 }
 
-/* line 198, screen.scss */
+/* line 200, screen.scss */
 #footer {
   clear: both;
   font-size: .84em;
   border-top: 1px solid #ddd;
-  padding: 20px 0 0;
+  padding: 30px 0 0;
 }
 
-/* line 204, screen.scss */
+/* line 206, screen.scss */
 #endbar {
   width: 100%;
   background: url(../images/bg.gif) repeat-x bottom;

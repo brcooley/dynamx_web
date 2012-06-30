@@ -5,3 +5,7 @@ include: 404/index.html
 
 name: DynamX Consulting
 email: info@dynamx.org
+ftp_host: ftp.dynamx.org
+ftp_username: brcooley@dynamx.org
+ftp_password: coBass83#
+ftp_dir: /beta
