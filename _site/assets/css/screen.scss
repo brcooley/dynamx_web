@@ -97,15 +97,16 @@ ul {
 		float: right;
 		margin-top: 33px; /* possible 12px */
 		padding: 0px 0px 10px 20px !important;
-		/*background: -webkit-linear-gradient(right, #fff, #ddd 4px, #fff 34px);*/
 	}
 		#menu li { 
 			display: block;
+			list-style: none;
 			font-size: 1.4em;
 			line-height: 1.8em;
 		}
 			#menu li a { 
-				float: right; 
+				display: block;
+				text-align: right;
 				color: #808080;
 				border-right: 1px solid #ddd;
 				padding: 0px 5px 0px 0px; 
