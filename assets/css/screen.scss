@@ -31,11 +31,12 @@ a {
 h1 { 
 	font-size: 1.4em;
 	font-weight: normal; 
-}
-	h1 a { 
+
+	a { 
 		color: #fff; 
-		font-size: 1.6em; 
+		font-size: 1.6em;
 	}
+}
 h2 { 
 	font-size: 1.2em;
 }
@@ -91,20 +92,20 @@ ul {
 	#logo { 
 		/* background: url(../../logo.png) no-repeat; */
 		/* padding-top: 180px; */
-		margin: 0px 0px 4px 0px !important; /* possible -170px on top margin*/
+		margin: 0px 0px 4px 0px !important;
 	}
 	#menu { 
 		float: right;
 		margin-top: 33px; /* possible 12px */
 		padding: 0px 0px 10px 20px !important;
-	}
-		#menu li { 
+	
+		li { 
 			display: block;
 			list-style: none;
 			font-size: 1.4em;
 			line-height: 1.8em;
-		}
-			#menu li a { 
+		
+			a { 
 				display: block;
 				text-align: right;
 				color: #808080;
@@ -117,9 +118,10 @@ ul {
     	 			 -o-transition: color .25s ease, background .5s ease, border .2s ease;
     					transition: color .25s ease, background .5s ease, border .2s ease;
 			}
-			#menu li a:hover, #menu li.current a, #menu li a:focus { 
+			/* Need to fix this (NESTING) when we get to mixins or something */
+			&.current a, a:hover, a:focus { 
 				color: #000;
-/*				background: 
+			/*	background: 
 					-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
 				border-right: 4px solid $base; /* #163169 or #ddd */
 				-webkit-transition: color .2s ease, background .5s ease, border .1s ease;
@@ -128,22 +130,24 @@ ul {
 		    		 -o-transition: color .1s ease, background .5s ease, border .1s ease;
 		        		transition: color .1s ease, background .5s ease, border .1s ease;
 			}
+		}
+	}
 	#pitch { 
 		background: url(../images/bars_lg.png) no-repeat right top; 
 		padding: 30px 350px 0px 10px;
 		border-bottom: 1px solid #ddd; 
 		height: 210px; 
 		margin: -10px 0 35px; 
-	}
-		#pitch h1 { 
+	
+		h1 { 
 			font-size: 2.6em; 
 			color: #000; 
-			/*margin: 0px 0 10px; */
 		}
-		#pitch h2 { 
+		h2 { 
 			line-height: 1.5em;
 			font-weight: normal;
 		}
+	}
 		#graphic {
 			width: 320px;
 			height: 240px;
@@ -153,14 +157,15 @@ ul {
 		width: 900px;
 		margin-left: 35px;
 		margin-bottom: 25px;
-	}
-		.full h1 {
+	
+		h1 {
 			font-size: 2em;
 			color: #000;
 			font-variant: small-caps;
 			margin-bottom: 30px;
 			// margin-left: -5px;
 		}
+	}
 	.bigfont {
 		font-size: 1.12em;
 	}
@@ -181,11 +186,12 @@ ul {
 		float: right; 
 		width: 630px; 
 		margin: 0 0 20px; 
-	}
-		.right h3 { 
+	
+		h3 { 
 			background: #808080; 
 			font-size: .84em; 
 		}
+	}
 	.third { 
 		float: left; 
 		width: 296px; 

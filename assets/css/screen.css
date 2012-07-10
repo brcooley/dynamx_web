@@ -42,19 +42,18 @@ h1 {
   font-size: 1.4em;
   font-weight: normal;
 }
-
 /* line 35, screen.scss */
 h1 a {
   color: #fff;
   font-size: 1.6em;
 }
 
-/* line 39, screen.scss */
+/* line 40, screen.scss */
 h2 {
   font-size: 1.2em;
 }
 
-/* line 42, screen.scss */
+/* line 43, screen.scss */
 h3 {
   font-size: 1.2em;
   background: #163169 repeat-x left bottom;
@@ -65,7 +64,7 @@ h3 {
   float: left;
 }
 
-/* line 51, screen.scss */
+/* line 52, screen.scss */
 h4 {
   margin: 0 0 15px;
   color: #555;
@@ -74,40 +73,40 @@ h4 {
   font-weight: normal;
 }
 
-/* line 58, screen.scss */
+/* line 59, screen.scss */
 p {
   clear: both;
   line-height: 1.64em;
   margin: 0 0 15px;
 }
 
-/* line 63, screen.scss */
+/* line 64, screen.scss */
 ul {
   clear: both;
   line-height: 1.64em;
   margin: 0px 0px 15px 25px;
 }
 
-/* line 68, screen.scss */
+/* line 69, screen.scss */
 .line {
   clear: both;
   border-bottom: 1px solid #ddd;
   margin: 0px 0 40px;
 }
 
-/* line 73, screen.scss */
+/* line 74, screen.scss */
 .logo-line {
   clear: both;
   border-bottom: 1px solid #ddd;
   margin: -10px 0px 40px;
 }
 
-/* line 78, screen.scss */
+/* line 79, screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 81, screen.scss */
+/* line 82, screen.scss */
 #content {
   width: 970px;
   margin: 0 auto;
@@ -119,31 +118,29 @@ ul {
 		font-size: .84em; 
 		text-align: right; 
 	}*/
-/* line 91, screen.scss */
+/* line 92, screen.scss */
 #logo {
   /* background: url(../../logo.png) no-repeat; */
   /* padding-top: 180px; */
   margin: 0px 0px 4px 0px !important;
-  /* possible -170px on top margin*/
 }
 
-/* line 96, screen.scss */
+/* line 97, screen.scss */
 #menu {
   float: right;
   margin-top: 33px;
   /* possible 12px */
   padding: 0px 0px 10px 20px !important;
 }
-
-/* line 101, screen.scss */
+/* line 102, screen.scss */
 #menu li {
   display: block;
   list-style: none;
   font-size: 1.4em;
   line-height: 1.8em;
+  /* Need to fix this (NESTING) when we get to mixins or something */
 }
-
-/* line 107, screen.scss */
+/* line 108, screen.scss */
 #menu li a {
   display: block;
   text-align: right;
@@ -157,12 +154,11 @@ ul {
   -o-transition: color .25s ease, background .5s ease, border .2s ease;
   transition: color .25s ease, background .5s ease, border .2s ease;
 }
-
-/* line 120, screen.scss */
-#menu li a:hover, #menu li.current a, #menu li a:focus {
+/* line 122, screen.scss */
+#menu li.current a, #menu li a:hover, #menu li a:focus {
   color: #000;
-  /*				background: 
-  					-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
+  /*	background: 
+  		-webkit-linear-gradient(right, rgba(22,49,105,0.25), rgba(22,49,105,0.0) 30px);*/
   border-right: 4px solid #163169;
   /* #163169 or #ddd */
   -webkit-transition: color .2s ease, background .5s ease, border .1s ease;
@@ -172,7 +168,7 @@ ul {
   transition: color .1s ease, background .5s ease, border .1s ease;
 }
 
-/* line 131, screen.scss */
+/* line 135, screen.scss */
 #pitch {
   background: url(../images/bars_lg.png) no-repeat right top;
   padding: 30px 350px 0px 10px;
@@ -180,35 +176,31 @@ ul {
   height: 210px;
   margin: -10px 0 35px;
 }
-
-/* line 138, screen.scss */
+/* line 142, screen.scss */
 #pitch h1 {
   font-size: 2.6em;
   color: #000;
-  /*margin: 0px 0 10px; */
 }
-
-/* line 143, screen.scss */
+/* line 146, screen.scss */
 #pitch h2 {
   line-height: 1.5em;
   font-weight: normal;
 }
 
-/* line 147, screen.scss */
+/* line 151, screen.scss */
 #graphic {
   width: 320px;
   height: 240px;
 }
 
-/* line 151, screen.scss */
+/* line 155, screen.scss */
 .full {
   float: left;
   width: 900px;
   margin-left: 35px;
   margin-bottom: 25px;
 }
-
-/* line 157, screen.scss */
+/* line 161, screen.scss */
 .full h1 {
   font-size: 2em;
   color: #000;
@@ -216,46 +208,45 @@ ul {
   margin-bottom: 30px;
 }
 
-/* line 164, screen.scss */
+/* line 169, screen.scss */
 .bigfont {
   font-size: 1.12em;
 }
 
-/* line 167, screen.scss */
+/* line 172, screen.scss */
 .left {
   float: left;
   width: 250px;
 }
 
-/* line 171, screen.scss */
+/* line 176, screen.scss */
 .bio {
   float: right;
 }
 
-/* line 174, screen.scss */
+/* line 179, screen.scss */
 #name {
   font-size: 2em;
 }
 
-/* line 177, screen.scss */
+/* line 182, screen.scss */
 #quicklinks {
   margin-top: -10px;
 }
 
-/* line 180, screen.scss */
+/* line 185, screen.scss */
 .right {
   float: right;
   width: 630px;
   margin: 0 0 20px;
 }
-
-/* line 185, screen.scss */
+/* line 190, screen.scss */
 .right h3 {
   background: #808080;
   font-size: .84em;
 }
 
-/* line 189, screen.scss */
+/* line 195, screen.scss */
 .third {
   float: left;
   width: 296px;
@@ -263,17 +254,17 @@ ul {
   text-align: justify;
 }
 
-/* line 195, screen.scss */
+/* line 201, screen.scss */
 .last {
   margin-right: 0;
 }
 
-/* line 198, screen.scss */
+/* line 204, screen.scss */
 #about {
   margin-top: 40px;
 }
 
-/* line 201, screen.scss */
+/* line 207, screen.scss */
 #footer {
   clear: both;
   font-size: .84em;
