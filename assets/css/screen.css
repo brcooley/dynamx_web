@@ -25,7 +25,7 @@ img {
 
 /* line 21, screen.scss */
 body {
-  font: .8em 'Droid Sans', 'Ubuntu', Arial, Sans;
+  font: .8em 'Droid Sans', Arial, Sans;
   background: white url(../images/bg.gif) repeat-x;
   /*background: #fff url(../images/bg.gif) repeat-x bottom;*/
   color: #777;
@@ -279,4 +279,28 @@ ul {
   font-size: .84em;
   border-top: 1px solid #ddd;
   padding: 30px 0 0;
+}
+
+/* From maintenance.css */
+/* line 210, screen.scss */
+#mid-box {
+  padding: 10% 0%;
+  font-size: 1.2em;
+  line-height: 3em;
+  margin: 0px auto;
+  width: 560px;
+}
+/* line 217, screen.scss */
+#mid-box a {
+  font-weight: bold;
+}
+
+/* line 221, screen.scss */
+.center-bar {
+  border-top: 1px dotted #ddd;
+}
+
+/* line 224, screen.scss */
+#center-text {
+  text-align: center;
 }
