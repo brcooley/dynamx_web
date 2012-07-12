@@ -1,0 +1,6 @@
+---
+layout: none
+permalink: .htaccess
+---
+
+ErrorDocument 404 /404/index.html
