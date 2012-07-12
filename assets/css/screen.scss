@@ -19,7 +19,7 @@ img {
 	border: 0
 }
 body { 
-	font: .8em 'Droid Sans', 'Ubuntu', Arial, Sans; 
+	font: .8em 'Droid Sans', Arial, Sans; 
 	background: #fff url(../images/bg.gif) repeat-x;
 	/*background: #fff url(../images/bg.gif) repeat-x bottom;*/
 	color: #777;
@@ -204,3 +204,23 @@ ul {
 		border-top: 1px solid #ddd; 
 		padding: 30px 0 0; 
 	}
+
+/* From maintenance.css */
+// Need to get the bg img out of body selector so it doesn't show up here
+#mid-box {
+	padding: 10% 0%;
+	font-size: 1.2em;
+	line-height: 3em;
+	margin: 0px auto;
+	width: 560px;
+
+	a {
+		font-weight: bold;
+	}
+}
+.center-bar {
+	border-top: 1px dotted #ddd;
+}
+#center-text {
+	text-align: center;
+}

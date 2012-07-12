@@ -4,3 +4,4 @@ permalink: .htaccess
 ---
 
 ErrorDocument 404 /404/index.html
+ErrorDocument 503 /503/index.html
